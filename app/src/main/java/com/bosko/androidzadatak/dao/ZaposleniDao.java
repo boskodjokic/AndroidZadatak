@@ -29,4 +29,8 @@ public interface ZaposleniDao {
 
     @Query("SELECT * FROM zaposleni_table")
     LiveData<List<Zaposleni>> getAllZaposleni();
+
+    @Query("SELECT name FROM zaposleni_table")
+    List<String> zaposleniName();
+
 }

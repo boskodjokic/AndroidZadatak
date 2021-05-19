@@ -15,6 +15,8 @@ public class KorisnikRepository {
 
     private KorisnikDao korisnikDao;
     private LiveData<List<Korisnik>> allKorisnik;
+    private LiveData<List<Korisnik>> listUser;
+    private LiveData<List<Korisnik>> listPass;
 
     public KorisnikRepository(Application application) {
         ZadatakDatabase database = ZadatakDatabase.getInstance(application);
@@ -32,6 +34,12 @@ public class KorisnikRepository {
 
     public void delete(Korisnik korisnik) {
         new DeleteKorisnikAsyncTask(korisnikDao).execute(korisnik);
+    }
+
+    public LiveData<List<Korisnik>> listUser() { return listUser; }
+
+    public LiveData<List<Korisnik>> listPass() {
+        return listPass;
     }
 
     public void deleteAll() {

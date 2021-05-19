@@ -27,6 +27,8 @@ public class KorisnikViewModel extends AndroidViewModel {
         repository.insert(korisnik);
     }
 
+
+
     public void update(Korisnik korisnik) {
         repository.update(korisnik);
     }

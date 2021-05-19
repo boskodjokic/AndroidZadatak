@@ -81,8 +81,9 @@ public abstract class ZadatakDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            korisnikDao.insert(new Korisnik("Name", "User", "pass", Arrays.asList(), Arrays.asList()));
-            zaposleniDao.insert(new Zaposleni("Zapsleni", "Prezime", "pass", Arrays.asList(), Arrays.asList()));
+            korisnikDao.insert(new Korisnik("Admin", "Admin", "Admin", Arrays.asList(), Arrays.asList()));
+            zaposleniDao.insert(new Zaposleni("Zapsleni", "Prezime", "pass","Beograd", Arrays.asList(), Arrays.asList()));
+            zaposleniDao.insert(new Zaposleni("Zapsleni2", "Prezime2", "pass2","Beograd", Arrays.asList(), Arrays.asList()));
             kupacDao.insert(new Kupac("kupac1", "123456", "okokp", Arrays.asList()));
             return null;
         }

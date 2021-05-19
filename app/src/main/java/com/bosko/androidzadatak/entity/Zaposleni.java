@@ -1,6 +1,5 @@
 package com.bosko.androidzadatak.entity;
 
-import androidx.lifecycle.LiveData;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -22,15 +21,21 @@ public class Zaposleni {
     private String surname;
 
     private String password;
+
+    private String city;
     @TypeConverters(MyTypeConverters.class)
     private List<Kupac> kupacList;
     @TypeConverters(MyTypeConverters.class)
     private List<Magacin> magacinList;
 
-    public Zaposleni(String name, String surname, String password, List<Kupac> kupacList, List<Magacin> magacinList) {
+    public Zaposleni() {
+    }
+
+    public Zaposleni(String name, String surname, String password, String city, List<Kupac> kupacList, List<Magacin> magacinList) {
         this.name = name;
         this.surname = surname;
         this.password = password;
+        this.city = city;
         this.kupacList = kupacList;
         this.magacinList = magacinList;
     }
@@ -85,5 +90,26 @@ public class Zaposleni {
 
     public void setMagacinList(List<Magacin> magacinList) {
         this.magacinList = magacinList;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Zaposleni{" +
+                "zaposleni_id=" + zaposleni_id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", password='" + password + '\'' +
+                ", city='" + city + '\'' +
+                ", kupacList=" + kupacList +
+                ", magacinList=" + magacinList +
+                '}';
     }
 }

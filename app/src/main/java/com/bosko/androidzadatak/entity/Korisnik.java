@@ -14,7 +14,7 @@ import java.util.List;
 public class Korisnik {
 
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private int korisnik_id;
     private String name;
     private String user;
     private String password;
@@ -23,6 +23,8 @@ public class Korisnik {
     @TypeConverters(MyTypeConverters.class)
     private List<Kupac> kupacList;
 
+    public Korisnik() {
+    }
 
     public Korisnik(String name, String user, String password, List<Zaposleni> zaposleniList, List<Kupac> kupacList) {
         this.name = name;
@@ -32,48 +34,48 @@ public class Korisnik {
         this.kupacList = kupacList;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getKorisnik_id() {
+        return korisnik_id;
+    }
+
+    public void setKorisnik_id(int korisnik_id) {
+        this.korisnik_id = korisnik_id;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getUser() {
-        return user;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public List<Zaposleni> getZaposleniList() {
-        return zaposleniList;
-    }
-
-    public List<Kupac> getKupacList() {
-        return kupacList;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUser() {
+        return user;
     }
 
     public void setUser(String user) {
         this.user = user;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public List<Zaposleni> getZaposleniList() {
+        return zaposleniList;
+    }
+
     public void setZaposleniList(List<Zaposleni> zaposleniList) {
         this.zaposleniList = zaposleniList;
+    }
+
+    public List<Kupac> getKupacList() {
+        return kupacList;
     }
 
     public void setKupacList(List<Kupac> kupacList) {

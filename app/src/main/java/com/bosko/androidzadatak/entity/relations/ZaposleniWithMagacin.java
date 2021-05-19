@@ -16,5 +16,5 @@ public class ZaposleniWithMagacin {
     private Zaposleni zaposleni;
 
     @Relation(parentColumn = "zaposleni_id", entityColumn = "magacin_id", associateBy = @Junction(ZaposleniMagacinCross.class))
-    private LiveData<List<Magacin>> listaMagacina;
+    private List<Magacin> listaMagacina;
 }

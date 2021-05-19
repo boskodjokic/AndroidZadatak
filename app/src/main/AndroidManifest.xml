@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidZadatak">
+        <activity android:name=".RegisterKorisnik"></activity>
+        <activity android:name=".RegisterZaposleni" />
+        <activity android:name=".HomePageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

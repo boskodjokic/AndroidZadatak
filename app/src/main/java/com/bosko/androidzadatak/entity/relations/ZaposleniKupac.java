@@ -19,5 +19,5 @@ public class ZaposleniKupac {
             parentColumn = "zaposleni_id",
             entityColumn = "kupac_id"
     )
-    public LiveData<List<Kupac>> listaKupaca;
+    private List<Kupac> listaKupaca;
 }

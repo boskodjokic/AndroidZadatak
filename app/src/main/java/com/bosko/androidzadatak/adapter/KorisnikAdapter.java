@@ -29,9 +29,8 @@ public class KorisnikAdapter extends RecyclerView.Adapter<KorisnikAdapter.Korisn
     @Override
     public void onBindViewHolder(@NonNull KorisnikHolder holder, int position) {
         Korisnik currentKorisnik = korisniks.get(position);
-        holder.textViewName.setText(currentKorisnik.getName());
         holder.textViewUser.setText(currentKorisnik.getUser());
-        holder.textViewPass.setText(String.valueOf(currentKorisnik.getPassword()));
+
     }
 
     @Override
@@ -46,14 +45,12 @@ public class KorisnikAdapter extends RecyclerView.Adapter<KorisnikAdapter.Korisn
 
     class KorisnikHolder extends RecyclerView.ViewHolder {
         private TextView textViewUser;
-        private TextView textViewPass;
-        private TextView textViewName;
+
 
         public KorisnikHolder(View itemView) {
             super(itemView);
             textViewUser = itemView.findViewById(R.id.text_view_user);
-            textViewPass = itemView.findViewById(R.id.text_view_pass);
-            textViewName = itemView.findViewById(R.id.text_view_name);
+
         }
     }
 }

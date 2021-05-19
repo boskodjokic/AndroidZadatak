@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add_korisnik"
+        android:title="Dodaj korisnika"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/add_zaposleni"
+        android:title="Dodaj zaposlenog"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/add_magacin"
+        android:title="Dodaj Magacin"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/add_kupac"
+        android:title="Dodaj Kupca"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/show_weather"
+        android:title="Pokazi vremensku prognozu"
+        app:showAsAction="never"/>
+
+</menu>

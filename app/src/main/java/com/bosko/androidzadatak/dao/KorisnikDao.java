@@ -32,6 +32,7 @@ public interface KorisnikDao {
     @Query("SELECT * FROM korisnik_table")
     LiveData<List<Korisnik>> getAllKorisnik();
 
+
 //    @Transaction
 //    @Query("SELECT zaposleniList FROM KORISNIK_TABLE")
 //    LiveData<List<Zaposleni>> getAllKorisnikZaposleni();
